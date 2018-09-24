@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=OurCoin
+Comment=OurCoin P2P Cryptocurrency
+Comment[fr]=OurCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=OurCoin, eşten eşe kriptografik sanal para birimi
+Exec=ourcoin-qt %u
+Terminal=false
+Type=Application
+Icon=ourcoin128
+MimeType=x-scheme-handler/ourcoin;
+Categories=Office;Finance;

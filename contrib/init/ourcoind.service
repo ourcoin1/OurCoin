@@ -1,0 +1,26 @@
+[Unit]
+Description=OurCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=ourcoin
+Group=ourcoin
+
+Type=forking
+PIDFile=/var/lib/ourcoind/ourcoind.pid
+
+ExecStart=/usr/bin/ourcoind -daemon -pid=/var/lib/ourcoind/ourcoind.pid \
+          -conf=/etc/ourcoin/ourcoin.conf -datadir=/var/lib/ourcoind
+
+ExecStop=-/usr/bin/ourcoin-cli -conf=/etc/ourcoin/ourcoin.conf \
+         -datadir=/var/lib/ourcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

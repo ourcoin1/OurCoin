@@ -1,0 +1,11 @@
+[Protocol]
+exec=ourcoin-qt '%u'
+protocol=ourcoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
